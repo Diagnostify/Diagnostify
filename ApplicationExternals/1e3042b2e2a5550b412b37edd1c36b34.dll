@@ -1,0 +1,462 @@
+<MenuScreen>:
+    FloatLayout:
+        Button:
+            text: 'Evaluation Test'
+            pos: 0, 320
+            size_hint: 0.2, 0.2
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'EvaluationTest'
+                
+        Button:
+            text: 'X-Rays/CT Scans'
+            pos: 0, 240
+            size_hint: 0.2, 0.2
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'CTEvaluation'
+                
+        Button:
+            text: 'Log Files'
+            pos: 0, 160
+            size_hint: 0.2, 0.2
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'LogFile'
+                app.log()
+                
+        Button:
+            text: 'Statistics'
+            pos: 0, 80
+            size_hint: 0.2, 0.2
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'Summary'
+                app.line_graph()
+                
+        Button:
+            text: 'Credits'
+            pos: 0, 0
+            size_hint: 0.2, 0.2
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'Credits'
+                
+        Label: 
+            text: ('Welcome To')
+            font_size: '32pt'
+            markup: True
+            pos: 330, 320
+            size_hint: 0.2, 0.2
+        
+        Label: 
+            text: ('Dignostify')
+            font_size: '32pt'
+            markup: True
+            pos: 330, 270
+            size_hint: 0.2, 0.2
+            
+        Label: 
+            text: ('With this app, we aim to provide the user with a detailed Covid')
+            font_size: '14pt'
+            markup: True
+            pos: 340, 220
+            size_hint: 0.2, 0.2
+            
+        Label: 
+            text: ('monitoring system, which will inturn help in identifiying the ')
+            font_size: '14pt'
+            markup: True
+            pos: 340, 195
+            size_hint: 0.2, 0.2
+            
+        Label: 
+            text: ('infection in the early stages. This initiative will also help')
+            font_size: '14pt'
+            markup: True
+            pos: 340, 170
+            size_hint: 0.2, 0.2
+            
+        Label: 
+            text: ('reduce the stress on medical staff in these trying times.')
+            font_size: '14pt'
+            markup: True
+            pos: 340, 145
+            size_hint: 0.2, 0.2
+            
+        Label: 
+            text: ("“Hard times don`t create heroes")
+            font_size: '14pt'
+            markup: True
+            pos: 340, 90
+            size_hint: 0.2, 0.2
+        
+        Label: 
+            text: ('It is during the hard times, when the `Hero` within us is revealed.”')
+            font_size: '14pt'
+            markup: True
+            pos: 340, 70
+            size_hint: 0.2, 0.2
+
+<EvaluationTestScreen>:
+    FloatLayout:
+        Button:
+            text: 'Evaluation Test'
+            pos: 0, 320
+            size_hint: 0.2, 0.2
+            disabled: True
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'EvaluationTest'
+                
+        Button:
+            text: 'X-Rays/CT Scans'
+            pos: 0, 240
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'CTEvaluation'
+                
+        Button:
+            text: 'Log Files'
+            pos: 0, 160
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'LogFile'
+                app.log()
+                
+        Button:
+            text: 'Statistics'
+            pos: 0, 80
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'Summary'
+                app.line_graph()
+                
+        Button:
+            text: 'Credits'
+            pos: 0, 0
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'Credits'
+                    
+        Button:
+            background_normal: 'ApplicationExternals\\mic.png'
+            pos: 270, 70
+            size_hint: 0.4, 0.75
+            on_press:
+                app.eval_test()
+
+        Label:
+            id: texts
+            text: ('Press the mic button to continue')
+            font_size: '12pt'
+            markup: True
+            pos: 349, 45
+            size_hint: 0.2, 0.2
+            
+<CTEvaluationScreen>:
+    FloatLayout:
+        Button:
+            text: 'Evaluation Test'
+            pos: 0, 320
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'EvaluationTest'
+                
+        Button:
+            text: 'X-Rays/CT Scans'
+            pos: 0, 240
+            size_hint: 0.2, 0.2
+            disabled: True
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'CTEvaluation'
+                
+        Button:
+            text: 'Log Files'
+            pos: 0, 160
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'LogFile'
+                app.log()
+                
+        Button:
+            text: 'Statistics'
+            pos: 0, 80
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'Summary'
+                app.line_graph()
+                
+        Button:
+            text: 'Credits'
+            pos: 0, 0
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'Credits'
+
+        TextInput:
+            id: stats2
+            text: ''
+            multiline: True
+            readonly: True
+            pos: 160, 20
+            size_hint: 0.55, 0.9
+
+        Button:
+            text: 'Upload X-Ray \n       Scan'
+            pos: 552.2, 319
+            size_hint: 0.2, 0.15
+            disabled: False
+            on_press:
+                stats2.text = app.upload_xray(stats2.text)
+
+        Button:
+            text: 'Upload CT \n     Scan'
+            pos: 552.2, 255
+            size_hint: 0.2, 0.15
+            disabled: False
+            on_press:
+                stats2.text = app.upload_ct(stats2.text)
+
+        Button:
+            text: 'Clear Screen'
+            pos: 552.2, 210
+            size_hint: 0.2, 0.1
+            disabled: False
+            on_press:
+                stats2.text = ''
+
+<LogFileScreen>:
+    FloatLayout:
+        Button:
+            text: 'Evaluation Test'
+            pos: 0, 320
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'EvaluationTest'
+                
+        Button:
+            text: 'X-Rays/CT Scans'
+            pos: 0, 240
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'CTEvaluation'
+
+        Button:
+            text: 'Log Files'
+            pos: 0, 160
+            size_hint: 0.2, 0.2
+            disabled: True
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'LogFile'
+                app.log()
+                
+        Button:
+            text: 'Statistics'
+            pos: 0, 80
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'Summary'
+                app.line_graph()
+                
+        Button:
+            text: 'Credits'
+            pos: 0, 0
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'Credits'
+        TextInput:
+            id: stats3
+            text: ''
+            multiline: True
+            readonly: True
+            pos: 160, 20
+            size_hint: 0.74, 0.9
+                
+<SummaryScreen>:
+    FloatLayout:
+        Button:
+            text: 'Evaluation Test'
+            pos: 0, 320
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'EvaluationTest'
+                
+        Button:
+            text: 'X-Rays/CT Scans'
+            pos: 0, 240
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'CTEvaluation'
+                
+        Button:
+            text: 'Log Files'
+            pos: 0, 160
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'LogFile'
+                app.log()
+                
+        Button:
+            text: 'Statistics'
+            pos: 0, 80
+            size_hint: 0.2, 0.2
+            disabled: True
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'Summary'
+                app.line_graph()
+                
+        Button:
+            text: 'Credits'
+            pos: 0, 0
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'Credits'
+
+        Image:
+            id: graph
+            source: "ApplicationExternals\\UserValues.png"
+            size_hint: 1, 1
+            pos_hint:{"right":1.1,"top":1.05}
+            allow_stretch: True
+
+<CreditsScreen>:
+    FloatLayout:
+        Button:
+            text: 'Evaluation Test'
+            pos: 0, 320
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'EvaluationTest'
+                
+        Button:
+            text: 'X-Rays/CT Scans'
+            pos: 0, 240
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'CTEvaluation'
+                
+        Button:
+            text: 'Log Files'
+            pos: 0, 160
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'LogFile'
+                app.log()
+                
+        Button:
+            text: 'Statistics'
+            pos: 0, 80
+            size_hint: 0.2, 0.2
+            disabled: False
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'Summary'
+                app.line_graph()
+                
+        Button:
+            text: 'Credits'
+            pos: 0, 0
+            size_hint: 0.2, 0.2
+            disabled: True
+            on_press:
+                root.manager.transition.direction = 'down'
+                root.manager.current = 'Credits'
+                
+        Label: 
+            text: ('  Credits  ')
+            font_size: '32pt'
+            markup: True
+            pos: 330, 300
+            size_hint: 0.2, 0.2
+        
+        Label: 
+            text: ('   ____________________')
+            font_size: '32pt'
+            markup: True
+            pos: 330, 270
+            size_hint: 0.2, 0.2
+            
+        Label: 
+            text: ('The people actively involved in this project were:                         ')
+            font_size: '14pt'
+            markup: True
+            pos: 340, 220
+            size_hint: 0.2, 0.2
+            
+        Label: 
+            text: ('- Akarsh Sharma                                                                                     ')
+            font_size: '14pt'
+            markup: True
+            pos: 340, 195
+            size_hint: 0.2, 0.2
+            
+        Label: 
+            text: ('- Aradhya Goel                                                                                         ')
+            font_size: '14pt'
+            markup: True
+            pos: 340, 170
+            size_hint: 0.2, 0.2
+
+        Label:
+            text: ('        - Siddharth Chopra                                                                                         ')
+            font_size: '14pt'
+            markup: True
+            pos: 340, 145
+            size_hint: 0.2, 0.2
+        
+        Label: 
+            text: ('In case of any query, you can reach out to us through our mail:')
+            font_size: '14pt'
+            markup: True
+            pos: 340, 40
+            size_hint: 0.2, 0.2
+        
+        Label: 
+            text: ('Diagnostify@outlook.com   ')
+            font_size: '14pt'
+            bold: True
+            markup: True
+            pos: 340, 20
+            size_hint: 0.2, 0.2
