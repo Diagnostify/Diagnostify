@@ -322,6 +322,7 @@ sm.add_widget(SummaryScreen(name='Summary'))
 sm.add_widget(CreditsScreen(name='Credits'))
 
 
+# Enable Threading
 # noinspection PyAttributeOutsideInit,PyShadowingNames
 class TraceThread(threading.Thread):
     def __init__(self, *args, **keywords):
@@ -347,6 +348,7 @@ class TraceThread(threading.Thread):
         return self.localtrace
 
 
+# Kivy GUI Class
 class DignostifyApp(App):
     def build(self):
         return sm
@@ -356,6 +358,7 @@ class DignostifyApp(App):
         we.write(bytes(text))
 
     def get_audio(self):
+        # Get Audio using PortAudio
         try:
             with sr.Microphone(sample_rate=20000, chunk_size=2048) as source:
                 rObject = sr.Recognizer()
@@ -376,6 +379,7 @@ class DignostifyApp(App):
             raise OSError
 
     def abc(self):
+        # Initialize User Based Test
         sm.get_screen("EvaluationTest").ids['texts'].text = ''
         name = log.parse(parameter="Name")[0]
         age = int(log.parse(parameter="Age")[0])
@@ -774,11 +778,13 @@ class DignostifyApp(App):
             traceback.print_exc()
 
     def eval_test(self):
+        # Start a thread for User Based test
         test = TraceThread(target=self.abc)
         test.start()
         return
 
     def upload_xray(self, text):
+        # Initialize X-Ray Scan Detection Model
         file = sg.popup_get_file('Open', no_window=True, file_types=(("Image Files", "*.jpg;*.png;*.jpeg"),))
         if file != "":
             image = cv2.imread(file)  # read file
@@ -797,6 +803,7 @@ class DignostifyApp(App):
         return text
 
     def upload_ct(self, text):
+        # Initialize CT Scan Detection Model
         file = sg.popup_get_file('Open', no_window=True, file_types=(("Image Files", "*.jpg;*.png;*.jpeg"),))
         if file != "":
             image = cv2.imread(file)  # read file
@@ -815,9 +822,11 @@ class DignostifyApp(App):
         return text
 
     def log(self):
+        # Update the Logs
         sm.get_screen("LogFile").ids['stats3'].text = open("ApplicationExternals\\LOGFILE", "r").read()
 
     def line_graph(self):
+        # Draw a statistical Line Plot for plotting the User Covid Values
         x = []
         y = []
         values = log.parse("Probability of being infected")
@@ -850,6 +859,7 @@ class DignostifyApp(App):
         sm.get_screen("Summary").ids['graph'].reload()
 
 
+# Initialize Secondary GUI using: WxPython
 class User_Info(wx.Frame):
 
     def __init__(self, *args, **kw):
@@ -918,6 +928,7 @@ class User_Info(wx.Frame):
 
 
 if __name__ == '__main__':
+    # Start the App MainLoop
     try:
         log = LogFile()
         if not os.path.isfile("ApplicationExternals\\LOGFILE"):
