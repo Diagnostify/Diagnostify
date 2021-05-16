@@ -1,3 +1,5 @@
+#! /bin/usr/python
+# Import all neccessary modules
 import os
 import ctypes
 import pyttsx3
@@ -19,12 +21,14 @@ try:
     import numpy as np
 
     global xception_chest, xception_ct
+    # Load CT scan recognition and X-Ray scan detection using keras and make it global scope
     xception_chest = load_model('models\\xception_chest.h5')
     xception_ct = load_model('models\\xception_ct.h5')
 except Exception:
     traceback.print_exc()
 
 
+# Convert text to speech
 def speak(text):
     engine = pyttsx3.init()
     voice = r"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_DAVID_11.0"
@@ -33,6 +37,7 @@ def speak(text):
     engine.runAndWait()
 
 
+# Read and Write to LOGFILE
 class LogFile:
     def __init__(self):
         self.file = "ApplicationExternals\\LOGFILE"
@@ -258,6 +263,8 @@ class LogFile:
                             return retdict
 
 
+# Start the main GUI code: Kivy
+# Enable bare-bone modules and sdl2 for window viewing
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
@@ -269,6 +276,7 @@ from kivy.core.window import Window
 
 Window.size = (700, 400)
 
+# Load the Kivy GUI code
 we = (open("ApplicationExternals\\1e3042b2e2a5550b412b37edd1c36b34.dll", "rb").read()).decode()
 
 Builder.load_string(we)
