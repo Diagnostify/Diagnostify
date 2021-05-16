@@ -1,12 +1,21 @@
-# Diagnostify: Your Personal Doctor
+# Diagnostify: Your personal Health Consultant
 
 ### About Diagnostify
-Diagnostify is a smart health monitoring system which can help in our <b>fight against Covid-19</b> by enabling us to monitor the disease and detect it in the early stages. 
+Diagnostify is a smart health monitoring system, which is made with the aim of reducing the number of severe Covid-19 cases by the <b>early and regular monitoring</b> of critical parameters of the user. This will in turn help to track down the number of cases and will also <b>ease the burden on the medical staff</b> of our country.
 ### Features
 
-- User-friendly GUI that anyone can use.
-- Our self-evaluation feature can tell the probability of being infected with Covid-19 in less than a minute
-- Examining of X-RAY and CT scans to provide a more comprehensive picture to the user
-- All the data we collect from the user is stored only on your device itself,  meaning that we can be completely trusted when it comes to their data privacy
-
-### 
+- It is free of cost and Open Source.
+- It is user-friendly and provides full statistics with quite accurate results
+- It has a legitimate diagnostic test along with a designated X-ray and CT scan page, which can be used to tell whether the person is infected by Covid-19 or not
+- Our app takes the input in the form of speech from the user making our app usable by all
+- Almost everything in our app is automated, and the results come in less than a minute
+### Downloads And Installation
+- First, open and download the installer from the following link:
+```bash
+https://1drv.ms/u/s!AoHo8SVBtNCgb5Onme72Rqp3pkc?e=vsgDQw
+```
+- Then, run the File: `Dignostify-Setup.exe` from the Downlods folder
+- Choose the app installation location and click Next
+- The Installer will download the App, and the required dependencies to run the App
+- After the installation finishes, click close and Search for `Diagnostify` in the Search Bar and Run the `Diagnostify.exe`
+- Enter the User Information and then app will run
