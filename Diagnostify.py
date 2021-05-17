@@ -349,7 +349,7 @@ class TraceThread(threading.Thread):
 
 
 # Kivy GUI Class
-class DignostifyApp(App):
+class DiagnostifyApp(App):
     def build(self):
         return sm
 
@@ -874,7 +874,7 @@ class User_Info(wx.Frame):
         nmbox = wx.BoxSizer(wx.VERTICAL)
 
         font = wx.Font(16, family=wx.SCRIPT, weight=wx.BOLD, style=wx.ITALIC)
-        st1 = wx.StaticText(panel, label="Dignostify User Information", style=wx.ALIGN_LEFT)
+        st1 = wx.StaticText(panel, label="Diagnostify User Information", style=wx.ALIGN_LEFT)
         st1.SetFont(font)
 
         self.nm1 = wx.TextCtrl(panel, -1, style=wx.ALIGN_LEFT, size=(500, -1))
@@ -936,7 +936,7 @@ if __name__ == '__main__':
             frame = User_Info(None, style=wx.DEFAULT_FRAME_STYLE & ~(wx.RESIZE_BORDER | wx.MAXIMIZE_BOX) & wx.NO_BORDER)
             frame.Show()
             app.MainLoop()
-        gui = DignostifyApp()
+        gui = DiagnostifyApp()
         gui.run()
     except ctypes.ArgumentError:
         gui.stop()
