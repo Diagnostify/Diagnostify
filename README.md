@@ -12,7 +12,7 @@ Diagnostify is a smart health monitoring system, which is made with the aim of r
 ### Downloads And Installation
 - First, open and download the installer from the following link:
 ```bash
-https://drive.google.com/u/0/uc?export=download&confirm=CqLQ&id=1WPNcBHZjfjM9Cc7sGceW1F2nHmKbOuyu
+https://www.dropbox.com/s/s80871zrgifhmmh/Diagnostify-Setup.exe?dl=0
 ```
 - Then, run the File: `Dignostify-Setup.exe` from the Downlods folder
 - Choose the app installation location and click Next
