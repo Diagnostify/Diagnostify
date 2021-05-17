@@ -50,7 +50,7 @@
             size_hint: 0.2, 0.2
         
         Label: 
-            text: ('Dignostify')
+            text: ('Diagnostify')
             font_size: '32pt'
             markup: True
             pos: 330, 270
