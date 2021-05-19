@@ -19,3 +19,5 @@ https://www.dropbox.com/s/mt8or97b2jl1n9b/Diagnostify-Setup.exe?dl=0
 - The Installer will download the App, and the required dependencies to run the App
 - After the installation finishes, click close and Search for `Diagnostify` in the Search Bar and Run the `Diagnostify.exe`
 - Enter the User Information and then app will run
+## Note
+Before running the code, please open the files in the directory `models/` and  `models/` and download the files
