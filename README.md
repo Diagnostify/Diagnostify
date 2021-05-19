@@ -20,4 +20,5 @@ https://www.dropbox.com/s/mt8or97b2jl1n9b/Diagnostify-Setup.exe?dl=0
 - After the installation finishes, click close and Search for `Diagnostify` in the Search Bar and Run the `Diagnostify.exe`
 - Enter the User Information and then app will run
 ## Note
-Before running the code, please open the files in the directory `models/xception_chest.h5` and  `models/xception_ct.h5` and download the files and save them with the same names
+Before running the code, 
+- Please open the files in the directory `models/xception_chest.h5` and  `models/xception_ct.h5` and download the files and save them with the same names
