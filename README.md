@@ -21,4 +21,15 @@ https://www.dropbox.com/s/mt8or97b2jl1n9b/Diagnostify-Setup.exe?dl=0
 - Enter the User Information and then app will run
 ## Note
 Before running the code, 
+- Install the following dependencies: 
+```python
+pyttsx3
+speech_recognition
+PySimpleGUI
+matplotlib
+wxpython
+keras
+opencv-python
+kivy
+```
 - Please open the files in the directory `models/xception_chest.h5` and  `models/xception_ct.h5` and download the files and save them with the same names
