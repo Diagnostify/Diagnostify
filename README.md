@@ -24,5 +24,6 @@ Before running the code,
 - Install the dependencies: 
 ```python
 pip install pyttsx3 speech_recognition PySimpleGUI matplotlib wxpython keras opencv-python kivy
+python >= 3.6
 ```
 - Please open the files in the directory `models/xception_chest.h5` and  `models/xception_ct.h5` and download the files and save them with the same names
